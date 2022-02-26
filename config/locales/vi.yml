@@ -1,0 +1,13 @@
+vi:
+  home:
+    header:
+      list: "Danh sách Khách Hàng"
+      sigup: "Đăng Ký"
+      login: "Đăng Nhập"
+      logout: "Đăng Xuất"
+      edit: "Chỉnh sửa thông tin cá nhân"
+      add: "Thêm Thông tin"
+      search: "Tìm Kiếm "
+      product: "Sản Phẩm"
+      addProduct: "Thêm sản phẩm"
+  

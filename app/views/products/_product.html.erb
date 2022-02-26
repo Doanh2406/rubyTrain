@@ -1,0 +1,17 @@
+<div id="<%= dom_id product %>" class="row">
+  
+  <div class="card" style="width: 18rem;">
+    <% if product.img.attached? %>
+      <%= image_tag(product.img,width:"200px") %>
+    <% end%>
+    <div class="card-body">
+      <h5 class="card-title"><%= product.title %></h5>
+      <p class="card-text color-red"><%= product.description %></p>
+      <p class="card-text"><%= product.price %></p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+      <br><br/>
+      <%= link_to "Show this product", product, class:"btn btn-secondary" %>
+    </div>
+  </div>
+  <br><br/>
+</div>

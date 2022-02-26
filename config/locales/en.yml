@@ -1,0 +1,17 @@
+
+en:
+  home:
+    header:
+      list: "Friends List"
+      sigup: "Sign Up"
+      login: "Sign In"
+      logout: "Sign Out"
+      edit: "Edit Profile"
+      add: "Add Friend"
+      search: "Search"
+      product: "Product"
+      addProduct: "Add Product"
+  static_pages:
+    index:
+      hello: "Hello world"
+      services_html: "JHSHSHSH <em>WUYDI </em>"

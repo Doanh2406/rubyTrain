@@ -1,0 +1,39 @@
+
+
+<tr id="<%= dom_id friend %>">
+  <td>
+    <!-- <p>First name:</p> -->
+    <%= link_to friend.first_name + friend.last_name, friend %>
+ 
+  </td>
+
+  <td>
+    <%= friend.email %>
+  </td>
+
+  <td>
+    <%= friend.phone %>
+  </td>
+
+  <td>
+    <%= friend.twitter %>
+  </td>
+  <td>
+    <%= friend.user_id %>
+  </td>
+  <!-- <td>
+    <span>
+      <%= link_to "Show" , friend %>
+    </span>
+  </td>
+  <td>
+    <span>
+      <%= link_to "Edit" , edit_friend_path(friend) %>
+    </span>
+  </td> -->
+  <td>
+    <span>
+      <%= link_to "Destroy" , friend, method: :delete, class: "btn btn-outline-danger btn-sm", form: {data: {turbo_confirm: 'Are you sure?'}} %>
+    </span>
+  </td>
+</tr>

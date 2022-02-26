@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to 'My Blog App' ,root_path, class:"navbar-brand"%>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+          <%= link_to 'About Us' , home_about_path, class:"nav-link"%>
+        </li> -->
+        <li class="nav-item">
+          <%= link_to t('.product') , products_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to t('.list') , friends_path, class:"nav-link"%>
+        </li>
+        
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to t('.add') , new_friend_path, class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to t('.logout') , destroy_user_session_path,data: { "turbo-method": :delete }, class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to t('.edit') , edit_user_registration_path, class:"nav-link"%>
+          </li>
+          
+          
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t('.sigup') , new_user_registration_path, class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to t('.login') , new_user_session_path, class:"nav-link"%>
+          </li>
+          
+          
+        <% end %>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder= <%= t('.search') %> aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%= t('.search') %></button>
+        <%= link_to t('.addProduct') , new_product_path,class:"btn btn-outline-warning my-2 my-sm-0 ml-2" %>
+      </form>
+     
+    </div>
+</nav>
